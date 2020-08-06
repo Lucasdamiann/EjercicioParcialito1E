@@ -24,7 +24,42 @@ Para poder sacar el permiso de circulación se deben llenar los siguientes datos
 */
 
 
-function mostrar()
-{
-	alert("Hola Mundo");
+function mostrar() {
+	let nombre;
+	let temp;
+	let sintomas;
+	
+	nombre = document.getElementById("nombreyapellido").value;
+	temp = document.getElementById("temperatura").value;
+	sintomas = document.getElementById("sintomas").value;
+
+
+	if (temp >= 35 && temp <= 40) {
+		if (temp >= 38) {
+			alert("Permiso no otorgado");
+		}
+		else if (temp <= 37) {
+			if (sintomas == "Tos") {
+				alert("Permiso Otorgado. No se olvide de toser sobre su codo");
+			}
+			else if (sintoma == "Pérdida de olfato" || sintoma == "Pérdida del gusto") {
+				alert("Permiso Otorgado");
+			}
+			else if (sintoma == "Dificultad para respirar") {
+				alert("Permiso no otorgado");
+			}
+		
+		}else{
+			alert("Permiso Otorgado");
+		}
+
+	}
+	else {
+		alert("Temperatura Incorrecta");
+	}
+
+
+
+
+
 }
